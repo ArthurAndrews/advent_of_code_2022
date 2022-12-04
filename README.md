@@ -1,3 +1,5 @@
 # Advent of Code 2022
 
-All R, all tidyverse, probably no loops.  
+My solutions will be in R using the tidyverse packages.  My goal is a terse but readable solution with no loops.
+
+https://adventofcode.com/2022
