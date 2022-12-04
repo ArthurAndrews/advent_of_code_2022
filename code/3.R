@@ -7,7 +7,7 @@ item <- tibble(
 )
 
 # store sack as a long data frame
-sack <- read_delim("3.dat", col_names = "contents", delim = "\n") %>%
+sack <- read_delim("data//3.dat", col_names = "contents", delim = "\n") %>%
   mutate(
     id = row_number(), 
     contents = str_split(contents, "")
@@ -54,7 +54,7 @@ sack %>%
   ggplot() + 
   geom_raster(aes(contents, id, fill = common)) +
   with_outer_glow(
-    geom_text(aes(contents, id, label = contents_match), na.rm = TRUE, size = 3, color = "cornflowerblue"),
+    geom_text(aes(contents, id, label = contents_match), na.rm = TRUE, size = 3, color = "white"),
     colour = "lightblue",
     #sigma = 12
     expand = 5
@@ -64,4 +64,5 @@ sack %>%
   scale_y_continuous(breaks = 1:50) +
   ylab("elf id") 
 
+ggsave("elf_sacks.png")
              

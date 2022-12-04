@@ -1,7 +1,7 @@
 library(tidyverse)
 
 # read file
-food <- "1.dat" %>%
+food <- "data//1.dat" %>%
   read_delim(delim = "\n", col_names = "calories", skip_empty_rows = FALSE) %>%
   # create column for elf
   mutate(elf = 1 + cumsum(is.na(calories))) %>%

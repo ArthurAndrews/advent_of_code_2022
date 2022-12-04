@@ -61,7 +61,7 @@ input %>% play()
 
 # round 1 ----
 
-round1 <- read_delim("2.dat", col_names = c("opponent_code", "self_code"))
+round1 <- read_delim("data//2.dat", col_names = c("opponent_code", "self_code"))
 round1 %>% play()
 
 # round 2 ----
